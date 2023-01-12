@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container { 
+              display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+grid-auto-flow: row;
+grid-template-areas:
+"one one four four five six"
+"two three four four five seven"
+"eight nine nine ten ten eleven";
+border: 20px solid rgb(65, 13, 1);
+color:rgb(65, 13, 13);
+text-align: center;
+}
+
+
+
+.one { grid-area: one;
+background-color: white;
+border: 10px solid rgb(65, 13, 1) }
+
+
+
+.two { grid-area: two; 
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1)}
+
+
+
+.three { grid-area: three; 
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1);}
+
+
+
+.four { grid-area: four; 
+    background-color: white;
+    border: 10px solid rgb(65, 13, 1); }
+
+
+.five { grid-area: five; 
+    background-color: white;
+    border: 10px solid rgb(65, 13, 1); }
+
+
+.six { grid-area: six;
+    background-color: white;
+    border: 10px solid rgb(65, 13, 1);  }
+
+
+
+.seven { grid-area: seven;
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1); }
+
+
+
+.eight { grid-area: eight; 
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1);}
+
+
+
+.nine { grid-area: nine;
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1); }
+
+
+
+.ten { grid-area: ten; 
+    background-color: white;
+    border: 10px solid rgb(65, 13, 1); }
+
+
+
+.eleven { grid-area: eleven;
+    background-color: white; 
+    border: 10px solid rgb(65, 13, 1); }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="one">
+            <h1> 1</h1></div>
+            <div class="two">
+            <h1> 2</h1></div>
+            <div class="three">
+            <h1> 3</h1></div>
+            <div class="four">
+            <h1> 4</h1></div>
+            <div class="five">
+            <h1> 5</h1></div>
+            <div class="six">
+            <h1> 6 </h1></div>
+            <div class="seven">
+            <h1>7</h1></div>
+            <div class="eight">
+            <h1> 8</h1></div>
+            <div class="nine">
+            <h1> 9</h1></div>
+            <div class="ten">
+            <h1> 10</h1></div>
+            <div class="eleven">
+            <h1>11</h1></div>
+            
+      </div>    
+            
+            </div>
+
+    </body>
+</html>

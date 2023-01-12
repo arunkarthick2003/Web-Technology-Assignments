@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <title> Welcome to my site | ARUN</title>
+    <style>
+.container {  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 2fr 6fr 5fr 2fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "NAVBAR NAVBAR NAVBAR NAVBAR"
+    "SIDEBAR MAIN MAIN MAIN"
+    "SIDEBAR content1 content2 content3"
+    "SIDEBAR FOOTER FOOTER FOOTER";
+    text-align: center;
+  height:400px;
+}
+
+.NAVBAR { grid-area: NAVBAR;
+background-color: aquamarine; }
+
+.SIDEBAR { grid-area: SIDEBAR;
+    background-color: rgb(127, 229, 255);  }
+
+.MAIN { grid-area: MAIN;
+    background-color: rgb(171, 250, 254);  }
+
+.content1 { grid-area: content1;
+    background-color: rgb(119, 255, 210);  }
+
+.content2 { grid-area: content2; 
+    background-color: rgb(31, 242, 172); }
+
+.content3 { grid-area: content3;
+    background-color: rgb(26, 246, 172);  }
+
+.FOOTER { grid-area: FOOTER; 
+    background-color: rgb(121, 241, 199); }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="container">
+                <div class="NAVBAR">NAVBAR</div>
+                <div class="SIDEBAR">SIDEBAR</div>
+                <div class="MAIN">MAIN</div>
+                <div class="content1">CONTENT1</div>
+                <div class="content2">CONTENT2</div>
+                <div class="content3">CONTENT3</div>
+                <div class="FOOTER">FOOTER</div>
+              </div>
+    </body>
+    </html>

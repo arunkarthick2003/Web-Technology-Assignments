@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <style>
+           .grid{
+               display: grid;
+               grid-template-rows: 1fr 4fr 1fr;
+               grid-template-columns: 5fr 1fr 1fr;
+               height: 100vh;
+               grid-gap: 5px;
+           }
+           .box{
+               background-color: rgb(255,255,0);
+               padding: 15px;
+           }
+           .b1{
+               grid-column: 1/span 3;
+           }
+           .b3{
+               grid-row: 2/ span 1;
+           }
+           </style>
+   </head>
+   <body>
+       <div class = "grid">
+           <div class="box b1">Header</div>
+           <div class="box b2">Ads</div>
+           <div class="box b3">Article</div>
+           <div class="box b3">Nav</div>
+           <div class="box b1">Footer</div>
+       </div>
+   </body>
+   </html>

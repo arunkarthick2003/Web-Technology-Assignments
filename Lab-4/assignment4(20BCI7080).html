@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .child1{
+            background-color: #097969;
+            width:55%;
+            margin-left: 330px;
+            height:70px;
+        }
+        h3{
+            padding: 10px;
+        }
+        form{
+            margin: auto;
+            width: 45%;
+            border: 4px solid rgb(32, 216, 223);
+        }
+        .inner_form{
+            padding: 8px;
+        }
+        img{
+            padding-top: 5px;
+        }
+       
+        ol{
+            list-style: none;
+            width: 100%px;
+        }
+        ol li{
+            width: 86%;
+            border: 3px solid red;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 5px;
+            position: relative;
+            display: block;
+            margin: 5px 0;
+        }
+        ol li span{
+            position: absolute;
+            width: 25px;
+            top: 0;
+            right: 0;
+            text-align: center;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class = "child1">
+        <h3 class="h3">ITEM LISTER</h3>
+    </div>
+    <br>
+    <form action="">
+        <div class="inner_form">
+            <br>
+            <b>Add items</b><br><br>
+            <input type="text" class="input_one" id="box" >
+            <button class = "btn-list" type="button" onclick="add()">Submit</button>
+            <button class = "rev-list" type="button" onclick="reverse()">Reverse</button>
+            <h3> Items </h3>
+            <br>
+            <div class="container" id="cont">
+                <ol id="list">
+                    
+                </ol>
+            </div>
+            </div>
+    </form>
+    <div class = "child2"></div>
+</body>
+
+<script >
+    const inputtext = document.getElementById("box");
+    const list = document.getElementById("list");
+
+    function reverse(){
+        var list = document.getElementById("list");
+        var i = list.childNodes.length;
+        while (i--)
+        list.appendChild(list.childNodes[i]);
+    }
+    function add(){ 
+        if(inputtext.value === "" || inputtext.value == null)
+        {
+            alert("ENTER THE TEXT");
+            return false;
+        }
+        else if(!isNaN(inputtext.value))
+        {
+            alert("Numbers are not allowed");
+            return false;
+        }
+        else
+        {
+
+
+            var x=document.createElement("li");
+
+            var text=document.createTextNode(document.getElementById("box").value);
+            x.appendChild(text);
+            document.getElementById("list").appendChild(x);
+
+            const mySpan = document.createElement("span");
+            mySpan.innerHTML = "X";
+            x.appendChild(mySpan);
+
+        } 
+        const close = document.querySelectorAll("span");
+        
+        for(let i=0; i<close.length; i++)
+        {  
+            close[i].addEventListener("click",()=>{   alert("Are you sure you want to remove");
+ 
+                close[i].parentElement.style.opacity = 0;
+                setTimeout(()=>{
+                    close[i].parentElement.style.display = "none";
+                })
+            })
+            
+        }
+    }
+
+</script>
+
+</html>
